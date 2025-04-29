@@ -8,3 +8,8 @@ const api = axios.create({
 export const getCountryData = () =>{
     return api.get("/all?fields=name,flags,population,region,subregion,capital,languages,currencies,borders");
 }
+
+export const getCountryDetails = (name) =>{
+    console.log("countryname: ",name);
+    return api.get(`/name/${name}?fullText=true&fields=name,currencies,flags,population,region,subregion,capital,languages,tld,borders`);
+}

@@ -1,3 +1,4 @@
+import { RiArrowRightBoxLine, RiArrowRightCircleFill, RiArrowRightDoubleLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
 export const CountryCard = ({ country }) => {
@@ -19,8 +20,8 @@ export const CountryCard = ({ country }) => {
             <p>
                 <span className="card-description">Capital: </span> {capital[0]}
             </p>
-            <NavLink>
-                <button>Read More </button>
+            <NavLink to={`/country/${name.common}`}>
+                <button>Read More <RiArrowRightDoubleLine/></button>
             </NavLink>
         </div>
         </div>

@@ -1,8 +1,38 @@
 export const Contact = () => {
   return (
-    <div className="contact">
-      <h1>Contact Us</h1>
-      <p>If you have any questions, feel free to reach out!</p>
-    </div>
+    <section className="section-contact">
+      <h2 className="container-title">Contact Us</h2>
+      <div className="contact-wrapper container">
+        <form action="">
+          <input
+            type="text"
+            className="form-control"
+            required
+            autoComplete="false"
+            placeholder="Enter Your Name"
+            name="username"
+          />
+          <input
+            type="email"
+            className="form-control"
+            required
+            autoComplete="false"
+            placeholder="Enter Your Email"
+            name="email"
+          />
+          <textarea
+            name="message"
+            className="form-control"
+            rows="10"
+            required
+            autoComplete="false"
+            placeholder="Enter Your Message"
+          ></textarea>
+          <button type="submit" value="send">
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
   );
-}
+};
